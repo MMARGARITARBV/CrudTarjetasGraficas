@@ -1,0 +1,49 @@
+body {
+    background-color:aqua;
+}
+
+h1.tamano {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+h2.pequeno {
+    text-align: left;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+h2.titulos {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+tr.nombre-table{
+    text-align: center;
+    font-size: 17px;
+}
+td{
+    text-align: center;
+}
+td.nombre{
+    text-align: left;
+ }
+#nuevoraton {
+    text-align: center;
+}
+
+div.panel-heading {
+    text-align: left;
+    font-size: 20px;
+}
+
+div.panel-body {
+    text-align: left;
+    font-size: 10px;
+}
+
+
+form {
+    text-align: center;
+}
