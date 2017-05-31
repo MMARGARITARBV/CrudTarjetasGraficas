@@ -23,7 +23,7 @@
              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
-        <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=index.jsp">    
+        <!-- <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=index.jsp"> -->
               
     </head>
     <body>
@@ -54,7 +54,6 @@
                     ResultSet listado = s.executeQuery("Select * FROM graficas");
 
                     while (listado.next()) {
-                        //Float idgrafica = Float.valueOf(listado.getString("ID"));
                         out.println("<tr>");
                         out.println("<td>" + listado.getString("nombre") + "</td>");
                         out.println("<td>" + listado.getString("marca") + "</td>");
@@ -67,18 +66,18 @@
                 <td>
                     <form action="borraTarjeta.jsp">
                         <input type="hidden" name="id" value="<%=listado.getString("id")%>" />
-                        <button type='submit' class='btn btn-warning' title="Borrar"><span class="glyphicon glyphicon glyphicon-minus"></span></button>
+                        <button type='submit' class='btn btn-warning' title="Borrar"><span>Borrar</span></button>
                     </form>
                     <form method="get" action="editaTarjeta.jsp">
-                        <input type="hidden" name="ID" value="<%=listado.getString("id")%>"/>
-                        <input type="hidden" name="marca" value="<%=listado.getString("nombre")%>">
+                        <input type="hidden" name="id" value="<%=listado.getString("id")%>"/>
+                        <input type="hidden" name="nombre" value="<%=listado.getString("nombre")%>">
                         <input type="hidden" name="marca" value="<%=listado.getString("marca")%>">
-                        <input type="hidden" name="marca" value="<%=listado.getString("tipoGrafica")%>">
-                        <input type="hidden" name="marca" value="<%=listado.getString("tipoMemoria")%>">
-                        <input type="hidden" name="marca" value="<%=listado.getString("tamano")%>">
-                        <input type="hidden" name="tipo" value="<%=listado.getString("estado")%>">
+                        <input type="hidden" name="tipoGrafica" value="<%=listado.getString("tipoGrafica")%>">
+                        <input type="hidden" name="tipoMemoria" value="<%=listado.getString("tipoMemoria")%>">
+                        <input type="hidden" name="tamano" value="<%=listado.getString("tamano")%>">
+                        <input type="hidden" name="estado" value="<%=listado.getString("estado")%>">
                         <input type="hidden" name="precio" value="<%=listado.getString("precio")%>">
-                        <button type='submit' class='btn btn-success' title="Modificar"><span class="glyphicon glyphicon-pencil"></span></button>
+                        <button type='submit' class='btn btn-success' title="Modificar"><span>Modificar</span></button>
                     </form>
                                        
                 </td>

@@ -24,16 +24,14 @@
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tgraficas","root", "");
             Statement s = conexion.createStatement();
                         
-            String insercion = "INSERT INTO graficas (`id`,`nombre`', `marca`,`tipoGrafica`,`tipoMemoria`,`tamano`,`estado`,`precio`) VALUES ('"
-            
-                           + request.getParameter("id")
-                           + "', '" + request.getParameter("nombre")
-                           + "', '" + request.getParameter("marca")
-                           + "', '" + request.getParameter("tipoGrafica")
-                           + "', '" + request.getParameter("tipoMemoria")
-                           + "', '" + request.getParameter("tamano")
-                           + "', '" + request.getParameter("estado")
-                           + "', " + request.getParameter("precio") + ")";
+            String insercion = "INSERT INTO graficas VALUES (" +  " '" + request.getParameter("id") + "' , "
+                + " '" + request.getParameter("nombre") + "' ,"
+                + " '" + request.getParameter("marca") + "' ,"
+                + " '" + request.getParameter("tipoGrafica") + "' ,"
+                + " '" + request.getParameter("tipoMemoria") + "' ,"
+                + " '" + request.getParameter("tamano") + "' ,"
+                + " '" + request.getParameter("estado") + "' ,"
+                + " '" + request.getParameter("precio") + "')";        
             s.execute(insercion);
             conexion.close();
             %>

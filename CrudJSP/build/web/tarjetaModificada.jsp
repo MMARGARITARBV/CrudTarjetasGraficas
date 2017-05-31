@@ -32,16 +32,19 @@
       request.setCharacterEncoding("UTF-8");
       
       String actualizacion = "UPDATE graficas SET "
-                            
-                           + "NOMBRE='" + request.getParameter("Nombre")
-                           + ", MARCA='" + request.getParameter("Marca")
-                           + ", TIPO_GRAFICA='" + request.getParameter("TipoGrafica")
-                           + ", TIPO_MEMORIA='" + request.getParameter("TipoMemoria")
-                           + ", TAMANO_MEMORIA=" + Float.valueOf(request.getParameter("precio"))
-                           + ", ESTADO='" + request.getParameter("Estado")
-                           +"',PRECIO=" + Float.valueOf(request.getParameter("precio"))        
-                           + "' WHERE ID=" + Integer.valueOf(request.getParameter("ID"));
-      s.execute(actualizacion);      
+              
+             
+              + "nombre = " + request.getParameter("nombre")
+              + ", marca = " + request.getParameter("marca")
+              + ", tipoGrafica = " + request.getParameter("tipoGrafica")
+              + ", tipoMemoria = " + request.getParameter("tipoMemoria")
+              + ", tamano = " + request.getParameter("tamano")
+              + ", estado = " + request.getParameter("estado")
+              + ", precio = " + request.getParameter("precio")
+              
+              + " WHERE id LIKE '" + request.getParameter("id") + "'";
+      
+      s.execute(actualizacion);     
       conexion.close();
     %> 
     <div class="alert alert-success" role="alert">Tarjeta modificada correctamente.</div>

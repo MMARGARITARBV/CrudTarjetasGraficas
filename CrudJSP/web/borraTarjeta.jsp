@@ -16,14 +16,14 @@
              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
-        <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=index.jsp"> 
+        <META HTTP-EQUIV="REFRESH" CONTENT="3; URL=index.jsp"> 
     </head>
     <body>
         <%
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tgraficas","root", "");
             Statement s = conexion.createStatement();
-            s.execute ("DELETE FROM graficas WHERE ID=" + request.getParameter("id"));
+            s.execute ("DELETE FROM graficas WHERE id=" + request.getParameter("id"));
         %>
         <div class="alert alert-danger" role="alert">Se ha borrado la tarjeta gráfica seleccionada</div> 
     </body>
