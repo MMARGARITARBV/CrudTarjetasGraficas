@@ -1,11 +1,9 @@
-body {
-    background-color:aqua;
-}
 
 h1.tamano {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
+
 }
 h2.pequeno {
     text-align: left;
@@ -29,12 +27,12 @@ td{
 td.nombre{
     text-align: left;
  }
-#nuevoraton {
+#nuevoTarjeta {
     text-align: center;
 }
 
 div.panel-heading {
-    text-align: left;
+    text-align: center;
     font-size: 20px;
 }
 
@@ -42,8 +40,9 @@ div.panel-body {
     text-align: left;
     font-size: 10px;
 }
-
-
-form {
+th.titulos{
     text-align: center;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #fff;
 }

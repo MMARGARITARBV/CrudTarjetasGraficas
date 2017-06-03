@@ -15,7 +15,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Modifica la tarjeta</title>
         
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
         <script type="text/javascript" src="scripts.js"></script>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
@@ -24,7 +24,7 @@
         <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=index.jsp">
          
     </head>
-    <body>
+     <body>
        <%
       Class.forName("com.mysql.jdbc.Driver");
       Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tgraficas","root", "");
@@ -32,17 +32,18 @@
       request.setCharacterEncoding("UTF-8");
       
       String actualizacion = "UPDATE graficas SET "
+              + "nombre='" + request.getParameter("nombre")
+              + "', marca='" + request.getParameter("marca")
+              + "', tipoGrafica='" + request.getParameter("tipoGrafica")
+              + "', tipoMemoria='" + request.getParameter("tipoMemoria")
+              + "', tamano='" + request.getParameter("tamano")
+              + "', estado='" + request.getParameter("estado")
+              + "', precio='" + request.getParameter("precio")
               
-             
-              + "nombre = " + request.getParameter("nombre")
-              + ", marca = " + request.getParameter("marca")
-              + ", tipoGrafica = " + request.getParameter("tipoGrafica")
-              + ", tipoMemoria = " + request.getParameter("tipoMemoria")
-              + ", tamano = " + request.getParameter("tamano")
-              + ", estado = " + request.getParameter("estado")
-              + ", precio = " + request.getParameter("precio")
-              
-              + " WHERE id LIKE '" + request.getParameter("id") + "'";
+                           
+              + "' WHERE id =" + request.getParameter("id") + "";
+      
+      
       
       s.execute(actualizacion);     
       conexion.close();

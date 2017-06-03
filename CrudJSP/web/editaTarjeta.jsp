@@ -9,7 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Edita Tarjeta</title>
         
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
         <script type="text/javascript" src="scripts.js"></script>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
@@ -18,59 +18,70 @@
      </head>
     <body>
         <% request.setCharacterEncoding("UTF-8"); %>
-        <h2 class="titulos">Modificar tarjeta </h2>
+        
         <div class="container">
-            <div class="row">
-                <form method="get" action="tarjetaModificada.jsp">
-
-                    <div class="col-md-4 col-md-offset-4">
-
-                        <div class="form-group">
-                            <div class="input-group">
-
-                                <span class="input-group-addon" id="sizing-addon2">ID: </span>
-                                <input type="text" name="id" class="form-control" value="<%=request.getParameter("id")%>" placeholder="<%=request.getParameter("id")%>" aria-describedby="sizing-addon2" readonly>
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-addon" id="sizing-addon2">NOMBRE: </span>
-                                <input type="text" name="nombre" class="form-control" value="<%=request.getParameter("nombre")%>" placeholder="<%=request.getParameter("nombre")%>" aria-describedby="sizing-addon2">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-addon" id="sizing-addon2">MARCA: </span>
-                                <input type="text" name="marca" class="form-control" value="<%=request.getParameter("marca")%>" placeholder="<%=request.getParameter("marca")%>" aria-describedby="sizing-addon2">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-addon" id="sizing-addon2">TIPO DE GRAFICA: </span>
-                                <input type="text" name="tipoGrafica" class="form-control" value="<%=request.getParameter("tipoGrafica")%>" placeholder="<%=request.getParameter("tipoGrafica")%>" aria-describedby="sizing-addon2">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-addon" id="sizing-addon2">TIPO DE MEMORIA: </span>
-                                <input type="text" name="tipoMemoria" class="form-control" value="<%=request.getParameter("tipoMemoria")%>" placeholder="<%=request.getParameter("tipoMemoria")%>" aria-describedby="sizing-addon2">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-addon" id="sizing-addon2">TAMAÑO</span>
-                                <input type="text" name="tamano" class="form-control" value="<%=request.getParameter("tamano")%>" placeholder="<%=request.getParameter("tamano")%>" aria-describedby="sizing-addon2">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-addon" id="sizing-addon2">ESTADO</span>
-                                <input type="text" name="estado" class="form-control" value="<%=request.getParameter("estado")%>" placeholder="<%=request.getParameter("estado")%>" aria-describedby="sizing-addon2">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-addon" id="sizing-addon2">PRECIO</span>
-                                <input type="text" name="precio" class="form-control" value="<%=request.getParameter("precio")%>" placeholder="<%=request.getParameter("precio")%>" aria-describedby="sizing-addon2">
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-success">Aceptar</button>
-                        <button type="button" class="btn btn-danger" onclick="cancelar()">Cancelar</button>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h2 class="titulos">Modificar Tarjeta</h2>
+                </div>
+            
+                <form class="form-horizontal" method="get" action="tarjetaModificada.jsp">
+                <div class="form-group">
+                    <br>
+                    <label class="control-label col-sm-2" for="id">Id:</label>
+                    <div class="col-sm-8">
+                     <input type="text" name="id" class="form-control" value="<%=request.getParameter("id")%>" placeholder="<%=request.getParameter("id")%>" aria-describedby="sizing-addon2" readonly>   
                     </div>
-                </form>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="nombre">Nombre:</label>
+                    <div class="col-sm-8">
+                     <input type="text" name="nombre" class="form-control" value="<%=request.getParameter("nombre")%>" placeholder="<%=request.getParameter("nombre")%>" aria-describedby="sizing-addon2">   
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="marca">Marca:</label>
+                    <div class="col-sm-8">
+                     <input type="text" name="marca" class="form-control" value="<%=request.getParameter("marca")%>" placeholder="<%=request.getParameter("marca")%>" aria-describedby="sizing-addon2">  
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="tipoGrafica">Tipo de Gráfica:</label>
+                    <div class="col-sm-8">
+                     <input type="text" name="tipoGrafica" class="form-control" value="<%=request.getParameter("tipoGrafica")%>" placeholder="<%=request.getParameter("tipoGrafica")%>" aria-describedby="sizing-addon2">   
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="tipoMemoria">Tipo de Memoria:</label>
+                    <div class="col-sm-8">
+                     <input type="text" name="tipoMemoria" class="form-control" value="<%=request.getParameter("tipoMemoria")%>" placeholder="<%=request.getParameter("tipoMemoria")%>" aria-describedby="sizing-addon2">   
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="tamano">Tamaño en Gigas:</label>
+                    <div class="col-sm-8">
+                     <input type="text" name="tamano" class="form-control" value="<%=request.getParameter("tamano")%>" placeholder="<%=request.getParameter("tamano")%>" aria-describedby="sizing-addon2">   
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="estado">Estado:</label>
+                    <div class="col-sm-8">
+                     <input type="text" name="estado" class="form-control" value="<%=request.getParameter("estado")%>" placeholder="<%=request.getParameter("estado")%>" aria-describedby="sizing-addon2">   
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="precio">Precio:</label>
+                    <div class="col-sm-8">
+                     <input type="text" name="precio" class="form-control" value="<%=request.getParameter("precio")%>" placeholder="<%=request.getParameter("precio")%>" aria-describedby="sizing-addon2">   
+                    </div>
+                </div>
+                    
+                    <h2 class="titulos"> <button type="submit" class="btn btn-success">Aceptar</button>
+                        <button type="button" class="btn btn-danger" onclick="cancelar()">Cancelar</button>
+                    </h2>
+                
+               </form>
+        
             </div>
         </div>
     </body>

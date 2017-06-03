@@ -16,35 +16,34 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Mis Tarjetas Gráficas</title>
 
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
         <script type="text/javascript" src="scripts.js"></script>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
-        <!-- <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=index.jsp"> -->
-              
+                   
     </head>
     <body>
         
         <div class="panel panel-primary">
-            <div class="panel-heading"><h1 class="tamano">TARJETAS GRÁFICAS</h1></div>
+            <div class="panel-heading"><h1 class="tamano">MIS TARJETAS GRÁFICAS</h1></div>
                     <div class="panel-body">
-                        <h2 class="titulos">Tarjetas disponibles</h2>
                         <h2 class="pequeno">  <button type="button" class="btn" onclick='nuevo()' title="Añadir Nueva Tarjeta"><span class="glyphicon glyphicon-plus"></span></button> AÑADIR NUEVA TARJETA</h2>  
                     </div>
-            </div>
-            <table class="table table-bordered">
-                <tr class="nombre-table">
-                    <td><b>NOMBRE</b></td>
-                    <td><b>MARCA</b></td>
-                    <td><b>TIPO DE GRAFICA</b></td>
-                    <td><b>TIPO DE MEMORIA</b></td>
-                    <td><b>TAMANO</b></td>
-                    <td><b>ESTADO</b></td>
-                    <td><b>PRECIOS</b></td>
-                    <td><b>CAMBIOS</b></td>
+        
+            <table class="table table-striped">
+                <tr>
+                    <th class="titulos">ID</th>
+                    <th class="titulos"><b>NOMBRE</b></th>
+                    <th class="titulos"><b>MARCA</b></th>
+                    <th class="titulos"><b>TIPO DE GRAFICA</b></th>
+                    <th class="titulos"><b>TIPO DE MEMORIA</b></th>
+                    <th class="titulos"><b>TAMAÑO</b></th>
+                    <th class="titulos"><b>ESTADO</b></th>
+                    <th class="titulos"><b>PRECIOS</b></th>
+                    <th class="titulos"><b>CAMBIOS</b></th>
                 </tr>
                 <%
                     Class.forName("com.mysql.jdbc.Driver");
@@ -55,6 +54,7 @@
 
                     while (listado.next()) {
                         out.println("<tr>");
+                        out.println("<td>" + listado.getString("id") + "</td>");
                         out.println("<td>" + listado.getString("nombre") + "</td>");
                         out.println("<td>" + listado.getString("marca") + "</td>");
                         out.println("<td>" + listado.getString("tipoGrafica") + "</td>");
