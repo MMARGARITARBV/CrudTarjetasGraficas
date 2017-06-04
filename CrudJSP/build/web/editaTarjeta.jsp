@@ -39,12 +39,17 @@
                      <input type="text" name="nombre" class="form-control" value="<%=request.getParameter("nombre")%>" placeholder="<%=request.getParameter("nombre")%>" aria-describedby="sizing-addon2">   
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="marca">Marca:</label>
-                    <div class="col-sm-8">
-                     <input type="text" name="marca" class="form-control" value="<%=request.getParameter("marca")%>" placeholder="<%=request.getParameter("marca")%>" aria-describedby="sizing-addon2">  
-                    </div>
-                </div> 
+                     <div class="form-group">
+                         <label class="control-label col-sm-2" for="marca">Marca:</label>
+                         <div class="col-sm-8">
+                             <select type="text" name="marca" class="form-control" value="<%=request.getParameter("marca")%>" placeholder="<%=request.getParameter("marca")%>" id="marca">
+                                 <option>Asus</option>
+                                 <option>MSI</option>
+                                 <option>EVGA</option>
+                                 <option>Gigabyte</option>
+                             </select>
+                         </div>
+                     </div> 
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="tipoGrafica">Tipo de Gráfica:</label>
                     <div class="col-sm-8">
@@ -60,19 +65,30 @@
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="tamano">Tamaño en Gigas:</label>
                     <div class="col-sm-8">
-                     <input type="text" name="tamano" class="form-control" value="<%=request.getParameter("tamano")%>" placeholder="<%=request.getParameter("tamano")%>" aria-describedby="sizing-addon2">   
+                        <select type="text" name="tamano" class="form-control" value="<%=Integer.valueOf(request.getParameter("tamano"))%>" placeholder="<%=request.getParameter("tamano")%>" id="tamano">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>6</option>
+                            <option>8</option>
+                        </select> 
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="estado">Estado:</label>
+                   <label class="control-label col-sm-2" for="estado">Estado:</label>
                     <div class="col-sm-8">
-                     <input type="text" name="estado" class="form-control" value="<%=request.getParameter("estado")%>" placeholder="<%=request.getParameter("estado")%>" aria-describedby="sizing-addon2">   
+                        <select type="text" name="estado" class="form-control" value="<%=request.getParameter("estado")%>" placeholder="<%=request.getParameter("estado")%>" id="estado">
+                                       <option>Nuevo</option>
+                                       <option>Usado</option>
+                                       <option>Reacondicionado</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="precio">Precio:</label>
                     <div class="col-sm-8">
-                     <input type="text" name="precio" class="form-control" value="<%=request.getParameter("precio")%>" placeholder="<%=request.getParameter("precio")%>" aria-describedby="sizing-addon2">   
+                     <input type="text" name="precio" class="form-control" value="<%=Integer.valueOf(request.getParameter("precio"))%>" placeholder="<%=request.getParameter("precio")%>" aria-describedby="sizing-addon2">   
                     </div>
                 </div>
                     

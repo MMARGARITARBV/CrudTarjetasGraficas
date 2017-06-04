@@ -20,62 +20,78 @@
                 <div class="panel-heading">
                     <h2 class="titulos" id="nuevaTarjeta">Introduzca los datos de la nueva tarjeta</h2>
                 </div>
-            
+
                 <form class="form-horizontal" method="get" action="grabaTarjeta.jsp">
-                <div class="form-group">
-                    <br>
-                    <label class="control-label col-sm-2" for="id">Id:</label>
-                    <div class="col-sm-8">
-                     <input type="text" name="id" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                    <div class="form-group">
+                        <br>
+                        <label class="control-label col-sm-2" for="id">Id:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="id" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="nombre">Nombre:</label>
-                    <div class="col-sm-8">
-                     <input type="text" name="nombre" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="nombre">Nombre:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="nombre" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="marca">Marca:</label>
-                    <div class="col-sm-8">
-                     <input type="text" name="marca" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="marca">Marca:</label>
+                        <div class="col-sm-8">
+                            <select type="text" name="marca" class="form-control" id="marca">
+                                    <option>Asus</option>
+                                    <option>MSI</option>
+                                    <option>EVGA</option>
+                                    <option>Gigabyte</option>
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="tipoGrafica">Tipo de Gráfica:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="tipoGrafica" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                        </div>
                     </div>
-                </div> 
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="tipoGrafica">Tipo de Gráfica:</label>
-                    <div class="col-sm-8">
-                     <input type="text" name="tipoGrafica" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="tipoMemoria">Tipo de Memoria:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="tipoMemoria" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="tipoMemoria">Tipo de Memoria:</label>
-                    <div class="col-sm-8">
-                     <input type="text" name="tipoMemoria" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="tamano">Tamaño en Gigas:</label>
+                        <div class="col-sm-8">
+                            <select type="text" name="tamano" class="form-control" id="tamano">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>6</option>
+                                    <option>8</option>
+                            </select> 
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="tamano">Tamaño en Gigas:</label>
-                    <div class="col-sm-8">
-                     <input type="text" name="tamano" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="estado">Estado:</label>
+                        <div class="col-sm-8">
+                            <select type="text" name="estado" class="form-control" id="estado">
+                                    <option>Nuevo</option>
+                                    <option>Usado</option>
+                                    <option>Reacondicionado</option>
+                            </select>   
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="estado">Estado:</label>
-                    <div class="col-sm-8">
-                     <input type="text" name="estado" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="precio">Precio:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="precio" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="precio">Precio:</label>
-                    <div class="col-sm-8">
-                     <input type="text" name="precio" class="form-control" placeholder="" aria-describedby="sizing-addon2">   
-                    </div>
-                </div>
-                    
-                    <h2 class="titulos">    <button type="submit" class="btn btn-success">Aceptar</button>
+
+                    <h2 class="titulos"><button type="submit" class="btn btn-success">Aceptar</button>
                         <button type="button" class="btn btn-danger" onclick="cancelar()">Cancelar</button>
                     </h2>
-                
+
                </form>
             </div>
         </div>
