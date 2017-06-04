@@ -4,7 +4,7 @@
 ## Tecnologias Usadas: Java, Bootstrap, Javascrip, Jquery y CSS.
 
 ### Captura: Index
-![ashampoo_snap_2017 06 04_11h49m10s_012_](https://cloud.githubusercontent.com/assets/14920733/26760553/03852de2-491c-11e7-8767-aed226775008.png)
+![index](https://cloud.githubusercontent.com/assets/14920733/26760685/65c433a6-491f-11e7-90b4-084bde448eb8.png)
 
 ### Captura: Confirmación del borrado de tarjeta
 ![confirmacion de borrado](https://cloud.githubusercontent.com/assets/14920733/26760186/7ece9ea2-4912-11e7-9c60-35cd9cc4e520.png)
