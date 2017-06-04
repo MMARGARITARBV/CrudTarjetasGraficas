@@ -43,7 +43,7 @@
                     <th class="titulos"><b>TAMAÑO</b></th>
                     <th class="titulos"><b>ESTADO</b></th>
                     <th class="titulos"><b>PRECIOS</b></th>
-                    <th class="titulos"><b>CAMBIOS</b></th>
+                    <th class="titulos" colspan="2"><b>CAMBIOS</b></th>
                 </tr>
                 <%
                     Class.forName("com.mysql.jdbc.Driver");
@@ -63,11 +63,8 @@
                         out.println("<td>" + listado.getString("estado") + "</td>");
                         out.println("<td>" + listado.getString("precio") + "</td>");
                 %>
-                <td>
-                    <form action="borraTarjeta.jsp">
-                        <input type="hidden" name="id" value="<%=listado.getString("id")%>" />
-                        <button type='submit' class='btn btn-warning' title="Borrar"><span>Borrar</span></button>
-                    </form>
+                
+                 <td>
                     <form method="get" action="editaTarjeta.jsp">
                         <input type="hidden" name="id" value="<%=listado.getString("id")%>"/>
                         <input type="hidden" name="nombre" value="<%=listado.getString("nombre")%>">
@@ -79,8 +76,13 @@
                         <input type="hidden" name="precio" value="<%=listado.getString("precio")%>">
                         <button type='submit' class='btn btn-success' title="Modificar"><span>Modificar</span></button>
                     </form>
-                                       
                 </td>
+                <td>
+                    <form action="borraTarjeta.jsp">
+                        <input type="hidden" name="id" value="<%=listado.getString("id")%>" />
+                        <button type='submit' class='btn btn-warning' title="Borrar"><span>Borrar</span></button>
+                    </form>
+                 </td>
                 <%
                     } //while
                     conexion.close();
